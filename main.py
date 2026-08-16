@@ -4,6 +4,7 @@ from camera import Camera
 
 
 def main() -> None:
+    set_brightness(50)
     camera = Camera()
     while True:
         brightness_level = camera.get_brightness()
