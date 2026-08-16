@@ -15,7 +15,7 @@ class Camera:
         return frame_intensity_percent
 
     def get_frame(self) -> np.ndarray[Any, np.dtype]:
-        video_capture = cv2.VideoCapture(self.camera_index)
+        video_capture = cv2.VideoCapture(self.camera_index, cv2.CAP_DSHOW)
         if not video_capture.isOpened():
             raise RuntimeError("Ошибка захвата камеры")
         try:
